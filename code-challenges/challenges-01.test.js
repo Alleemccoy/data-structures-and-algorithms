@@ -36,8 +36,17 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
+// ['hi', 'hello', 'Allee']; <= input
+// ['HI', 'HELLO', 'ALLEE']; <= output
+
+// 'hi'.toUpperCase();
+// str.toUpperCase();
+// [].forEach()
+
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const newArray = [];
+  arr.forEach (str => newArray.push (str.toUpperCase()));
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
