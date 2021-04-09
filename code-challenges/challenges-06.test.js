@@ -22,9 +22,8 @@ For example:
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
-const getNames = (arr) => {
-  // Solution code here...
-};
+const getNames = (arr) => arr.map(potato => potato.name.split('').reduce((rev, char) => char + rev, ''));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -69,9 +68,7 @@ addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
-const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
-};
+const addBirthYearProperty = (obj, year) => obj.yearBorn = year;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
