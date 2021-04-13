@@ -128,25 +128,15 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
 
-  let i = 0;
-  while ( i < 10){
-    console.log(i);
-    i++;
-  }
-
-
-  for (let i=0; i < 10; i++) {
-    console.log(i)
-  };
-
-  for (let i=0; i < recipe.ingredients.length; i++) {
+  for (let i = 0; i < recipe.ingredients.length; i++) {
     let ingredient = recipe.ingredients[i];
+
     let tracker = 0;
     for (let j = 0; j < ingredient.length; j++) {
-      if(ingredient[j] === ' ') {
+      if (ingredient[j] === ' ') {
         tracker++;
-        if(tracker === 2) {
-          result.push(ingredient.slice(j +1));
+        if (tracker === 2) {
+          result.push(ingredient.slice(j + 1));
           tracker === 0;
 
           break;
@@ -156,6 +146,7 @@ const listFoods = (recipe) => {
   }
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
