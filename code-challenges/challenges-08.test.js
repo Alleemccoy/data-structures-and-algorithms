@@ -96,7 +96,7 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => 
+const isCapitalized = (str) => [...str.matchAll(/\b[A-Z]\w*\b/g)].map(items => items[0]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
