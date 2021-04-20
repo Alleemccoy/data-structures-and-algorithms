@@ -57,9 +57,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
-const updateNumbers = (obj) => {
-  // Solution code here...
-};
+const updateNumbers = (obj) => Object.values(obj).sort();
 
 
 
@@ -114,7 +112,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  Object.values(arr).forEach(character => {
+    houses.push(character.house);
+  });
   return houses;
 };
 
