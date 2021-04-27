@@ -130,9 +130,14 @@ hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenValues = (arr, character) => Object.values(arr, character -1);
-
-const containsWorld = (input) => /world/.test(input);
+const hasChildrenValues = (arr, character) => {
+  for (let obj of arr) {
+    if (Object.values(obj).includes(character)) {
+      return obj.children && obj.children.length;
+    }
+  }
+  return false;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
